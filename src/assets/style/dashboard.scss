@@ -1,0 +1,94 @@
+@import './mediaQuery';
+
+* {
+    box-sizing: border-box;
+}
+
+.dashBoardBackground {
+    // background-color: #040D21;
+    background-color: #ECF0F3;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(7.5px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(255, 0, 0, 0.288);
+            border-radius: 50%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 132, 255, 0.253);
+            border-radius: 50%;
+        }
+    }
+
+    .app {
+        background-color: transparent;
+
+        .appBar {
+
+            .profileChip {
+                border-radius: 50px;
+                background: linear-gradient(145deg, #e6e6e6, rgba(255, 255, 255, 0.55));
+                box-shadow: 14px 14px 18px #dedede,
+                    -14px -14px 18px #ffffff;
+
+                backdrop-filter: blur(7.5px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+
+                span {
+                    &:nth-child(1) {
+                        font-size: .6rem;
+                        text-transform: lowercase;
+                    }
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(200px);
+        z-index: 1;
+    }
+
+    .webgl {
+        position: fixed;
+        top: 0;
+        right: 0;
+        outline: none;
+        z-index: 2;
+        transform: translate(10%, 2%);
+        background-color: transparent;
+
+        @include mobile {
+            transform: translate(0%, 0%);
+        }
+    }
+}

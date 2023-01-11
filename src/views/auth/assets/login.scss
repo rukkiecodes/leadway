@@ -1,0 +1,92 @@
+@import '../../../assets/style/_mediaQuery';
+
+* {
+    box-sizing: border-box;
+}
+
+.background {
+    background-color: #040D21;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(255, 0, 0, 0.438);
+            border-radius: 50%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 132, 255, 0.438);
+            border-radius: 50%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(200px);
+        z-index: 1;
+    }
+
+    .formContainer {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 600px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: 100%;
+            left: 50%;
+            padding: 1em;
+        }
+
+        .formCard {
+            background: transparent;
+            backdrop-filter: blur(50px);
+        }
+    }
+
+    .webgl {
+        position: fixed;
+        top: 0;
+        right: 0;
+        outline: none;
+        z-index: 2;
+        transform: translate(25%, 0%);
+        background-color: transparent;
+
+        @include mobile {
+            transform: translate(0%, 0%);
+        }
+    }
+}

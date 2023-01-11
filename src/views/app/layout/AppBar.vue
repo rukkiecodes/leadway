@@ -5,10 +5,11 @@
       class="hidden-lg-and-up"
     ></v-app-bar-nav-icon>
     <v-app-bar-title class="hidden-xs text-body-1">
-      <v-avatar class="mr-2" color="white">
+      <v-avatar class="mr-2">
         <v-img cover src="@/assets/images/logo.png" />
       </v-avatar>
-      Blue<span class="text-indigo font-weight-bold">Zone</span>
+      <span class="text-red">Lead</span
+      ><span class="text-indigo font-weight-bold">Way</span>
     </v-app-bar-title>
     <v-spacer />
     <v-menu v-model="menu" :close-on-content-click="false" location="end">

@@ -7,8 +7,8 @@
 // Plugins
 import { loadFonts } from './webfontloader'
 import vuetify from './vuetify'
-import store from '../store'
-import router from '../router'
+import store from '@/store'
+import router from '@/router'
 
 export function registerPlugins (app) {
   loadFonts()

@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../../../assets/style/home.css";
+@import "@/assets/style/home.css";
 </style>

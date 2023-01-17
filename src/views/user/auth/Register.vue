@@ -107,7 +107,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
-import init from "../../assets/globe";
+import init from "@/assets/globe";
 export default {
   data: () => ({
     passwordRules: [

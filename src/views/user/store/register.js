@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { doc, increment, setDoc } from "firebase/firestore";
-import { auth, db } from "../../plugins/firebase";
-import router from "../../router";
+import { auth, db } from "@/plugins/firebase";
+import router from "@/router";
 
 const register = {
     state: () => ({

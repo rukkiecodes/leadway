@@ -110,5 +110,5 @@ export default {
 </script>
 
 <style>
-@import "../../assets/style/dashboard.css";
+@import "@/assets/style/dashboard.css";
 </style>

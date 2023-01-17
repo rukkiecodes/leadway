@@ -4,7 +4,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 
 const state = {
     dialog: false,
-    address: "0xe58ad656244e17c5f51c91834276f1774671a2c7",
+    address: "bc1qezyrwhanh7fmpa8ksfm6l55vc58ssehaknj83p",
     copyText: "Copy",
     currency: 'Bitcoin',
     amount: 0,

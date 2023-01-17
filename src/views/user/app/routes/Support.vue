@@ -1,8 +1,8 @@
 <template>
-  <v-container class="py-0">
+  <v-container class="py-0 px-0 chatScreen">
     <v-card
       flat
-      height="90vh"
+      height="100%"
       color="transparent"
       class="d-flex flex-column card rounded-xl"
     >
@@ -32,7 +32,7 @@
           </v-card>
         </div>
       </div>
-      <v-toolbar class="px-4 pr-2">
+      <v-toolbar class="px-4 pr-2" color="transparent">
         <v-text-field
           hide-details
           color="indigo"
@@ -97,7 +97,7 @@ export default {
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 80vh;
+  height: 100%;
 }
 
 .chatSheet::-webkit-scrollbar {
@@ -118,5 +118,9 @@ export default {
   backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.chatScreen {
+  height: 100%;
 }
 </style>

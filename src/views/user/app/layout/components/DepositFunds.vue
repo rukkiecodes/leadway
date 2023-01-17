@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="deposit.dialog" width="400" max-width="100%">
+  <v-dialog v-model="deposit.dialog" width="400" max-width="100%" persistent>
     <template v-slot:activator="{ props }">
       <v-list-item v-bind="props" active-color="transparent">
         <v-list-item-title class="text-grey-darken-4 text-body-2">Deposit Funds</v-list-item-title>
@@ -55,7 +55,7 @@ export default {
 
     selectCurrency() {
       // console.log(this.deposit.currency)
-      this.deposit.address = this.deposit.currency == 'Bitcoin' ? "1FWgBvNQ9Cy5PWdzG9YNDD1hv7WEpVPy5L" : this.deposit.currency == 'Ethereum' ? "0xe58ad656244e17c5f51c91834276f1774671a2c7" : this.deposit.currency == 'USDT' ? "TXsqcr5PeN7SZcE2JLQK1AZFjmTXWUyou7" : this.deposit.currency == 'BnB' ? '0xe58ad656244e17c5f51c91834276f1774671a2c7' : "1FWgBvNQ9Cy5PWdzG9YNDD1hv7WEpVPy5L";
+      this.deposit.address = this.deposit.currency == 'Bitcoin' ? "bc1qezyrwhanh7fmpa8ksfm6l55vc58ssehaknj83p" : this.deposit.currency == 'Ethereum' ? "0xf953a9EA3a1C8399feaebd657483754571480Dc1" : this.deposit.currency == 'USDT' ? "TDCUVsWMuRGw52p6q3vbeeL2rMP1X38suV" : this.deposit.currency == 'BnB' ? '0xf953a9EA3a1C8399feaebd657483754571480Dc1' : "bc1qezyrwhanh7fmpa8ksfm6l55vc58ssehaknj83p";
     },
   },
 

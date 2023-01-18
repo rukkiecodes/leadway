@@ -20,10 +20,10 @@
         >
       </v-card-title>
 
-      <v-card-text v-show="active">
+      <v-card-text v-show="active" class="px-0">
         <BTC />
       </v-card-text>
-      <v-card-text v-show="!active">
+      <v-card-text v-show="!active" class="px-0">
         <ETH />
       </v-card-text>
     </v-card>

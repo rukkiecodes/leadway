@@ -1,16 +1,13 @@
 <template>
-  <v-card-title class="pl-0 d-flex align-center">
+  <v-card-title class="d-flex align-center">
     <v-avatar size="34" class="mr-3">
-      <v-img src="@/assets/images/XTVCBTC--big.svg" />
+      <v-img src="https://res.cloudinary.com/rukkiecodes/image/upload/v1674077189/XTVCBTC--big_vifjve.svg" />
     </v-avatar>
     Bitcoin / U.S. Dollar
   </v-card-title>
-  <v-card-title class="pl-0 text-h5 pb-0" id="btcPrice">
+  <v-card-title class="text-h5 pb-0" id="btcPrice">
     <small style="font-size: 0.6rem">USD</small></v-card-title
   >
-  <!-- v-card-title class="pl-0 text-body-1 pt-0 text-red-lighten-1">
-    −70.00 −0.42%
-  </v-card-title -->
 
   <canvas id="btcChart"></canvas>
 </template>

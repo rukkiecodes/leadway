@@ -48,7 +48,7 @@
     </v-card-text>
   </v-card-text>
   <v-avatar class="mr-2" size="30">
-    <v-img src="@/assets/images/XTVCBTC--big.svg" cover></v-img>
+    <v-img src="https://res.cloudinary.com/rukkiecodes/image/upload/v1674077189/XTVCBTC--big_vifjve.svg" cover></v-img>
   </v-avatar>
 </template>
 

@@ -12,7 +12,13 @@
       ><span class="text-indigo font-weight-bold">Way</span>
     </v-app-bar-title>
     <v-spacer />
-    <v-menu v-model="menu" :close-on-content-click="false" location="end">
+    <v-menu
+      v-model="menu"
+      :close-on-content-click="false"
+      location="start"
+      open-on-hover
+      offset-y
+    >
       <template v-slot:activator="{ props }">
         <v-chip
           v-bind="props"
@@ -20,19 +26,22 @@
           style="cursor: pointer"
           class="py-5 pl-2 pr-5 mr-4 card"
         >
-          <v-avatar class="mr-2" color="indigo">
+          <v-avatar
+            class="mr-2"
+            :color="profile?.avatar == undefined ? 'indigo' : 'transparent'"
+          >
             <v-img
-              v-show="profile.avatar != undefined"
-              :src="profile.avatar"
+              v-show="profile?.avatar != undefined"
+              :src="profile?.avatar"
               cover
             />
             <i
-              v-show="profile.avatar == undefined"
+              v-show="profile?.avatar == undefined"
               class="las la-user-alt icon"
             ></i>
           </v-avatar>
           <span class="font-weight-bold text-body-2 text-grey-darken-3">{{
-            profile.name
+            profile?.name
           }}</span>
         </v-chip>
       </template>
@@ -45,14 +54,28 @@
         color="transparent"
         elevation="4"
       >
+        <v-card max-height="300">
+          <v-img
+            cover
+            :src="
+              profile?.avatar == undefined
+                ? 'https://res.cloudinary.com/rukkiecodes/image/upload/v1672097949/bg_tfeymr.jpg'
+                : profile?.avatar
+            "
+          />
+        </v-card>
         <v-list class="card" color="transparent">
-          <v-list-item :title="profile.name"> </v-list-item>
+          <v-list-item :title="profile?.name"> </v-list-item>
         </v-list>
 
         <v-divider></v-divider>
 
         <v-card-text>
-          <v-btn block flat class="text-indigo rounded-lg text-capitalize"
+          <v-btn
+            block
+            flat
+            to="/app/profile"
+            class="text-indigo rounded-lg text-capitalize"
             >Edit Profile</v-btn
           >
           <v-btn

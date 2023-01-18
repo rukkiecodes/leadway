@@ -48,7 +48,20 @@
     </v-card-text>
   </v-card-text>
   <v-avatar class="mr-2" size="30">
-    <v-img src="https://res.cloudinary.com/rukkiecodes/image/upload/v1674077189/XTVCBTC--big_vifjve.svg" cover></v-img>
+    <v-img
+      :src="
+        transaction?.currency == 'Ethereum'
+          ? 'https://res.cloudinary.com/rukkiecodes/image/upload/v1674077189/XTVCETH--big_usxuh5.svg'
+          : transaction?.currency == 'Bitcoin'
+          ? 'https://res.cloudinary.com/rukkiecodes/image/upload/v1674077189/XTVCBTC--big_vifjve.svg'
+          : transaction?.currency == 'USDT'
+          ? 'https://res.cloudinary.com/rukkiecodes/image/upload/v1674077441/tether_rmsn0x.png'
+          : transaction?.currency == 'BnB'
+          ? 'https://res.cloudinary.com/rukkiecodes/image/upload/v1674077578/binance_cnrt28.png'
+          : 'https://res.cloudinary.com/rukkiecodes/image/upload/v1674077653/dollar_pmwrwz.png'
+      "
+      cover
+    ></v-img>
   </v-avatar>
 </template>
 

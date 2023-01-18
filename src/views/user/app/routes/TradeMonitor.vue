@@ -3,7 +3,20 @@
     class="fullContainer py-0 d-flex flex-column align-center justify-start"
   >
     <v-card
+      v-if="allTrades.length <= 0"
       flat
+      color="transparent"
+      height="100%"
+      class="pt-16"
+    >
+      <v-img src="@/assets/images/empty.svg" width="400" />
+      <v-card-text class="text-center text-body-1">
+        No copied trader yet
+      </v-card-text>
+    </v-card>
+    <v-card
+      flat
+      v-else
       width="500"
       max-width="100%"
       :key="trader?.id"

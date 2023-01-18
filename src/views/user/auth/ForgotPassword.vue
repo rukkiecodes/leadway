@@ -53,7 +53,10 @@
 import init from "@/assets/globe";
 export default {
   mounted() {
-    this.$nextTick(() => {
+    this.$nextTick(async () => {
+      let token = await localStorage.leadwayToken;
+      if (token) this.$router.push("/app");
+
       init();
     });
   },

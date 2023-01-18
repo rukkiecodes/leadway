@@ -9,13 +9,14 @@ const state = {
     currency: 'Bitcoin',
     amount: 0,
     loading: false,
+    step: 1
 }
 
 const actions = {
     async depositFund({ commit, dispatch }) {
         if (state.amount <= 0 || state.currency == '' || state.address == '') return
 
-        this.state.deposit.dialog = false
+        // this.state.deposit.dialog = false
         this.state.deposit.loading = true
         let sharedId = uuid.v4()
         
@@ -28,6 +29,7 @@ const actions = {
             state: 'pending',
             timestamp: serverTimestamp()
         })
+        this.state.deposit.step = 2
         await addDoc(collection(db, "users", localStorage.leadwayToken, 'transactions'), {
             sharedId,
             currency: state.currency,
